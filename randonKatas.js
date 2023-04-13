@@ -130,17 +130,13 @@
 // console.log(parts);
 // function add(str) {
 //   let numSplit = str.split("+");
-//   let num1 = parseInt(numSplit[0]);
-//   let num2 = parseInt(numSplit[1]);
-//   let num3 = parseInt(numSplit[2]);
-//   console.log(num3);
-//   if (Number.isNaN(num3)) {
-//     num3 = 0;
+//   let sum = 0;
+//   for (let i = 0; i < numSplit.length; i++) {
+//     sum += parseInt(numSplit[i]);
 //   }
-
-//   return num1 + num2 + num3;
+//   return sum;
 // }
-// console.log(add("1+2"));
+// console.log(add("7+12+100"));
 
 // function getCount(str) {
 //   let vCount = 0;
@@ -170,21 +166,7 @@
 // [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
 // [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 
-function findOdd(A) {
-  const countNum = {};
-
-  for (let i = 0; i < A.length; i++) {
-    const num = A[i];
-    countNum[num] = (countNum[num] || 0) + 1;
-  }
-  for (const prop in countNum) {
-    if (countNum[prop] % 2 !== 0) {
-      return parseInt(prop);
-    }
-  }
-}
-
-console.log(findOdd([0]));
+//First level 6 Kata
 
 // function squareDigits(num) {
 //   const array = Array.from(String(num));
@@ -204,3 +186,31 @@ console.log(findOdd([0]));
 //   countMap[num] = (countMap[num] || 0) + 1;
 // }
 // console.log(countMap);
+
+// const arr = [1, 2, 3, -4, -5, 6];
+// let index = -1;
+// // let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] < 0) {
+//     index = i;
+//     break;
+//   }
+// }
+// //   sum += arr[i];
+
+// console.log(index);
+
+function high(x) {
+  let result = "";
+  let letterArray = [];
+
+  for (let i = 0; i < x.length; i++) {
+    letterArray.push(x[i]);
+    console.log(letterArray);
+    if (charCode >= 97 && charCode <= 122) {
+      result += charCode - 96 + "";
+    }
+  }
+  return result;
+}
+console.log(high("man i need a taxi up to ubud'"));
