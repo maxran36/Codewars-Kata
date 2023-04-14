@@ -200,17 +200,41 @@
 
 // console.log(index);
 
-function high(x) {
-  let result = "";
-  let letterArray = [];
+// function high(x) {
+//   let result = 0;
+//   let letterArray = [];
+//   let charCode;
+//   letterArray = x.split(" ");
 
-  for (let i = 0; i < x.length; i++) {
-    letterArray.push(x[i]);
-    console.log(letterArray);
-    if (charCode >= 97 && charCode <= 122) {
-      result += charCode - 96 + "";
-    }
-  }
-  return result;
-}
-console.log(high("man i need a taxi up to ubud'"));
+//   console.log(letterArray);
+//   for (let i = 0; i < x.length; i++) {
+//     if (x.charCodeAt(i) >= 97 && x.charCodeAt(i) <= 122) {
+//       charCode = x.charCodeAt(i) - 96;
+//       result += charCode;
+//     }
+//   }
+//   return result;
+// }
+// console.log(high("abc abcd"));
+// const strArray = "aa aa";
+// let splitArray = strArray.split(" ");
+// let countArray = [];
+
+// splitArray = String(splitArray);
+// // console.log(typeof splitArray);
+// // console.log(typeof strArray);
+// for (let i = 0; i < splitArray.length; i++) {
+//   countArray.push(splitArray.charCodeAt(i) - 96);
+// }
+// //console.log(countArray.slice(0, 3));
+
+// let newArray = countArray.filter((val) => val > 0);
+// console.log(countArray);
+// let sum = 0;
+// let sum2 = 0;
+// countArray.reduce((acc, num) => {
+//   if (num > 0) {
+//     sum += num;
+//   } else sum2 += num;
+// }, 0);
+// console.log(sum);
