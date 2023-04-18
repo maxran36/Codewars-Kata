@@ -14,7 +14,7 @@ function alphabetPosition(text) {
       //console.log(letters);
       textToNum = letters.charCodeAt(0) - 96;
 
-      if (textToNum > 0) {
+      if (textToNum > 0 && textToNum < 27) {
         numArray.push(textToNum);
       }
       // console.log(numArray);
