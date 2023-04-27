@@ -199,3 +199,104 @@
 // //   sum += arr[i];
 
 // console.log(index);
+
+// function removeEveryOther(arr) {
+//   //your code here
+//   let arr2 = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i] + " need this");
+//     arr2.push(arr[i]);
+//     arr.splice(i, 1);
+//   }
+//   return arr2;
+// }
+// // should return 1, 3, 5, 7, 9
+// console.log(removeEveryOther(["a", "b", "c"]));
+
+// function disemvowel(str) {
+//   let wordWithoutVowels = [];
+//   for (let i = 0; i < str.length; i++) {
+//     if (
+//       str[i].toLowerCase() !== "a" &&
+//       str[i].toLowerCase() !== "e" &&
+//       str[i].toLowerCase() !== "i" &&
+//       str[i].toLowerCase() !== "o" &&
+//       str[i].toLowerCase() !== "u"
+//     ) {
+//       wordWithoutVowels.push(str[i]);
+//     }
+//   }
+//   return wordWithoutVowels.join("");
+// }
+// console.log(disemvowel("This eee uu IIII OOOO All"));
+
+// function highAndLow(numbers) {
+//   // let min;
+//   // let max;
+//   // let strToNum;
+//   // strToNum = parseInt(numbers);
+//   //   min = Math.min(parseInt(numbers));
+//   //   max = Math.max(parseInt(numbers));
+//   //   console.log(strToNum);
+//   // }
+
+//   let numArray2 = [];
+//   console.log(numArray);
+//   for (let i = 0; i < numArray.length; i++) {
+
+//   }
+//   return numArray;
+// }
+
+// highAndLow("1 9 3 4 -5"); // return "9 -5"
+// function highAndLow(numbers) {
+//   let min = Math.min(...numbers.split(" ").map(Number));
+//   let max = Math.max(...numbers.split(" ").map(Number));
+//   let answer = `${max} ${min} `;
+//   answer.toString;
+//   return answer;
+// }
+// console.log(highAndLow("1 9 3 4 -5"));
+
+// let abc = " 1 2 -3";
+// let numArr = abc.split(" ").map(Number);
+// console.log(Math.min(...numArr));
+
+// function fakeBin(x) {
+//   let stringToInt = [];
+//   for (let i = 0; i < x.length; i++) {
+//     stringToInt.push(parseInt(x[i]));
+//   }
+
+//   for (let y = 0; y < stringToInt.length; y++) {
+//     if (stringToInt[y] < 5) {
+//       stringToInt[y] = 0;
+//     } else {
+//       stringToInt[y] = 1;
+//     }
+//   }
+//   return stringToInt.join("");
+// }
+// console.log(fakeBin("14567812"));
+
+// function strCount(str, letter) {
+//   let letterCount = 0;
+//   str = str.toLowerCase();
+//   for (let i = 0; i < str.length; i++) {
+//     if (letter === str[i]) {
+//       letterCount++;
+//     }
+//   }
+//   return letterCount;
+// }
+// console.log(strCount("", "h"));
+
+function wave(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+      console.log(str.replace(str[i], str[i].toUpperCase()) + i);
+    }
+  }
+}
+wave("upper");
