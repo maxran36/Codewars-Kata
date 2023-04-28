@@ -292,11 +292,35 @@
 // }
 // console.log(strCount("", "h"));
 
-function wave(str) {
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] !== " ") {
-      console.log(str.replace(str[i], str[i].toUpperCase()) + i);
-    }
-  }
+// function wave(str) {
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] !== " ") {
+//       // console.log(str.replace(str[i], str[i].toUpperCase()) + i);
+//       console.log(str.slice(i + 1));
+//       //  console.log(str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1));
+//     }
+//   }
+// }
+// wave("upper");
+
+//remove everthing past #
+
+// function removeUrlAnchor(url) {
+//   for (let i = 0; i < url.length; i++) {
+//     if (url[i] === "#") {
+//       url = url.slice(0, i);
+//     }
+//   }
+//   return url;
+// }
+// console.log(removeUrlAnchor("www.google.com#about"));
+// "d", "e", "f", "g", "h", , "i"
+function isPangram(string) {
+  const alpha = Array.from({ length: 26 }, (_, i) =>
+    String.fromCharCode("a".charCodeAt(0) + i)
+  );
+  string = string.split("");
+  return alpha.every(element => string.includes(element));
 }
-wave("upper");
+//console.log(isPangram("acdefghijklmnopqrstuvwxyz"));
+console.log(isPangram("tHe quick brown fox jumps over the lazy dog."));
