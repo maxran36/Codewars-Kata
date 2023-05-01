@@ -315,12 +315,23 @@
 // }
 // console.log(removeUrlAnchor("www.google.com#about"));
 // "d", "e", "f", "g", "h", , "i"
-function isPangram(string) {
-  const alpha = Array.from({ length: 26 }, (_, i) =>
-    String.fromCharCode("a".charCodeAt(0) + i)
-  );
-  string = string.split("");
-  return alpha.every(element => string.includes(element));
-}
-//console.log(isPangram("acdefghijklmnopqrstuvwxyz"));
-console.log(isPangram("tHe quick brown fox jumps over the lazy dog."));
+// function isPangram(string) {
+//   const alpha = Array.from({ length: 26 }, (_, i) =>
+//     String.fromCharCode("a".charCodeAt(0) + i)
+//   );
+//   string = string.toLowerCase();
+//   string = string.split("");
+//   //console.log(alpha);
+//   return alpha.every((element) => string.includes(element));
+// }
+// //console.log(isPangram("acdefghijklmnopqrstuvwxyz"));
+// console.log(isPangram("Cwm fjord bank glyphs vext quiz"));
+const isAnagram = function (test, original) {
+  test = test.toLowerCase().split("").sort().join();
+  original = original.toLowerCase().split("").sort().join();
+
+  return test.length === original.length && test.includes(original)
+    ? true
+    : false;
+};
+console.log(isAnagram("torBf", "fBotr"));
