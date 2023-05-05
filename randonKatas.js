@@ -326,12 +326,157 @@
 // }
 // //console.log(isPangram("acdefghijklmnopqrstuvwxyz"));
 // console.log(isPangram("Cwm fjord bank glyphs vext quiz"));
-const isAnagram = function (test, original) {
-  test = test.toLowerCase().split("").sort().join();
-  original = original.toLowerCase().split("").sort().join();
 
-  return test.length === original.length && test.includes(original)
-    ? true
-    : false;
-};
-console.log(isAnagram("torBf", "fBotr"));
+// const isAnagram = function (test, original) {
+//   test = test.toLowerCase().split("").sort().join();
+//   original = original.toLowerCase().split("").sort().join();
+
+//   return test.length === original.length && test.includes(original)
+//     ? true
+//     : false;
+// };
+// console.log(isAnagram("torBf", "fBotr"));
+
+// var uniqueInOrder = function (iterable) {
+//   let newArr = [];
+
+//   for (let i = 0; i < iterable.length; i++) {
+//     newArr.push(iterable[i]);
+//   }
+
+//   for (let i = 0; i < newArr.length; i++) {
+//     if (newArr[i] === newArr[i + 1]) {
+//       newArr.splice(i, 1);
+//       i--;
+//     }
+//     console.log("Index of " + i + " -> " + iterable[i]);
+//   }
+//   return newArr;
+// };
+// console.log(uniqueInOrder("aabccd"));
+
+// Our football team has finished the championship.
+
+// Our team's match results are recorded in a collection of strings. Each match is represented by a string in the format "x:y", where x is our team's score and y is our opponents score.
+
+// For example: ["3:1", "2:2", "0:1", ...]
+
+// Points are awarded for each match as follows:
+
+// if x > y: 3 points (win)
+// if x < y: 0 points (loss)
+// if x = y: 1 point (tie)
+// We need to write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.
+
+// Notes:
+
+// our team always plays 10 matches in the championship
+// 0 <= x <= 4
+// 0 <= y <= 4
+
+// function points(games) {
+//   let sum = 0;
+//   let newArr = [];
+//   games = games.join("").replace(/:/g, "");
+
+//   for (let i = 0; i < games.length; i++) {
+//     newArr.push(games[i]);
+//   }
+
+//   for (let i = 0; i < newArr.length; i++) {
+//     if (newArr[i] > newArr[i + 1]) {
+//       sum += 3;
+//       i++;
+//     } else if (newArr[i] < newArr[i + 1]) {
+//       sum += 0;
+//       i++;
+//     } else if (newArr[i] === newArr[i + 1]) {
+//       sum += 1;
+//       i++;
+//     }
+//   }
+//   return sum;
+// }
+// console.log(
+//   points(["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"])
+// ); // should output 30
+
+// let str = "apple is in the house";
+// let newStr = str.replaceconsole.log("1" > "2");
+// let arr = [
+//   "0:1",
+//   "0:2",
+//   "0:3",
+//   "0:4",
+//   "1:2",
+//   "1:3",
+//   "1:4",
+//   "2:3",
+//   "2:4",
+//   "3:4",
+// ];
+// let sum = 0;
+// let newArr = [];
+// arr = arr.join("").replace(/:/g, "");
+
+// for (let i = 0; i < arr.length; i++) {
+//   newArr.push(arr[i]);
+// }
+
+// for (let i = 0; i < newArr.length; i++) {
+//   if (newArr[i] > newArr[i + 1]) {
+//     sum += 3;
+//     i++;
+//   } else if (newArr[i] < newArr[i + 1]) {
+//     sum += 0;
+//     i++;
+//   } else if (newArr[i] === newArr[i + 1]) {
+//     sum += 1;
+//     i++;
+//   }
+// }
+// function sortByLength(array) {
+//   // sortArray = [];
+//   // // Return an array containing the same strings, ordered from shortest to longest
+//   // // for (let i = 0; i < array.length; i++) {
+//   // // console.log(array[i].length);
+//   // // sortArray = array.sort((a, b) => a - b);
+//   // for (let i = 0; i < array.length; i++) {
+//   //   //console.log(array[i].length + " " + array[array.length -1]);
+//   //   if (array[i].length > array[i + 1]) {
+//   //     array.unshift(array[i + 1]);
+//   //     // array.push(array[array.length - 1]);
+//   //     // continue;
+//   //   }
+//   // }
+//   // return array;
+
+//   return array.sort((a, b) => a.length - b.length);
+// }
+// console.log(sortByLength(["Beg", "I", "To", "there"]));
+
+function likes(names) {
+  let answer;
+  if (names.length === 0) {
+    answer = "no one likes this";
+  } else {
+    for (let i = 0; i < names.length; i++) {
+      if (names.length === 1) {
+        answer = `${names[i]} likes this`;
+      } else if (names.length > 1 && names.length < 3) {
+        answer = `${names[i - 1]} and ${names[i]} like this`;
+      } else if (names.length > 2 && names.length < 4) {
+        answer = `${names[i - 2]} , ${names[i - 1]} and ${names[i]} like this`;
+      } else if (names.length > 3) {
+        answer = `${names[0]} and ${names[1]} and ${
+          names.length - 2
+        } others like this`;
+      }
+    }
+  }
+  return answer;
+}
+console.log(likes(["Alex", "Jacob", "Mark", "Max", "tim", "rob", "gail"]));
+
+let x = [];
+console.log(x.length);
